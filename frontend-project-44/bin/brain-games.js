@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-install: 
-	npm install
-console.log('Welkom');
+
+import readlineSync from "readline-sync";
+import name from "../src/cli.js";
