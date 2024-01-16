@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
-
+import { hi } from '../index.js';
+const name2 = hi();
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 export const brainEv = () => {
-  const name1 = readlineSync.question('May I have your name? ');
   let count = 0; // Счетчик вызовов функции
 
   const request = () => {
@@ -23,7 +24,7 @@ export const brainEv = () => {
       request(); // Рекурсивный вызов функции
     } else {
       console.log(
-        "'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, Bill!"
+        `'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name2}!`
       );
     }
   };
