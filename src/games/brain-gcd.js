@@ -30,10 +30,6 @@ export const brainGc = () => {
     const questionToUser = `Question: ${randNam1}  ${randNam2}`;
     console.log(questionToUser);
     const userAnswer = readlineSync.question('Your answer: ');
-
-    // console.log('Question:', randNam1, randNam2);
-    // console.log(userAnswer);
-
     if (parseInt(userAnswer) === correctAnswer) {
       console.log('Correct!');
       count++;
@@ -47,7 +43,7 @@ export const brainGc = () => {
       );
     }
 
-    return brainGcd(); // Рекурсивный вызов игры
+    return brainGcd(); // Рекурсивный вызов
   };
 
   brainGcd(); // Начало игры

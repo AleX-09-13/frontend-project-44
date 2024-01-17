@@ -10,5 +10,8 @@ calc:
 	@node bin/brain-calc.js
 	@node src/index.js
 gcd:
-	@node bin/brain-gcd.js			
+	@node bin/brain-gcd.js
+prog:
+	@node bin/brain-progression.js	
+
 		
