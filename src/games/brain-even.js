@@ -1,13 +1,12 @@
 import readlineSync from 'readline-sync';
 import { hi } from '../index.js';
-const name2 = hi();
+const userName = hi();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
+let count = 0; // Счетчик вызовов функции
 export const brainEv = () => {
-  let count = 0; // Счетчик вызовов функции
-
   const request = () => {
     if (count >= 3) {
-      console.log(`Congratulations, ${name1}`);
+      console.log(`Congratulations, ${userName}`);
       return;
     }
 
@@ -24,7 +23,7 @@ export const brainEv = () => {
       request(); // Рекурсивный вызов функции
     } else {
       console.log(
-        `'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name2}!`
+        `'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${userName}!`
       );
     }
   };

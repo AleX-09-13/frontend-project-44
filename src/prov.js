@@ -1,19 +1,22 @@
-// Функция, генерирующая массив случайных чисел в прогрессии
-const generateRandomProgression = () => {
-  const start = Math.floor(Math.random() * 10); // Генерация начального значения
-  const diff = Math.floor(Math.random() * 5) + 1; // Генерация разности прогрессии
-
-  const progr = [start]; // Создание массива для хранения прогрессии
-  let next = start;
-
-  for (let i = 1; i < 5; i++) {
-    next += diff; // Вычисление следующего числа в прогрессии
-    progr.push(next); // Добавление числа в прогрессию
+function isPrime(num) {
+  let number = Math.floor(Math.random() * 10); //Получаем рандомное число
+  if (num <= 1) {
+    return false;
+  } else if (num <= 3) {
+    return true;
+  } else if (num % 2 === 0 || num % 3 === 0) {
+    return false;
   }
 
-  return progr; // Возврат полученной прогрессии
-};
+  let i = 5;
+  while (i * i <= num) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+    i += 6;
+  }
 
-// Генерация прогрессии
-const progression = generateRandomProgression();
-console.log(progression); // Вывод прогрессии в консоль
+  return true;
+}
+
+console.log(isPrime());

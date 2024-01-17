@@ -12,6 +12,8 @@ calc:
 gcd:
 	@node bin/brain-gcd.js
 prog:
-	@node bin/brain-progression.js	
+	@node bin/brain-progression.js
+prime:
+	@node bin/brain-prime.js		
 
 		
