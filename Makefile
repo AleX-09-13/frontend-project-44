@@ -2,11 +2,13 @@ install:
 	npm ci
 publish:
 	npm publish --dry-run
-bg:
+games:
 	@node bin/brain-games.js
-be:
+even:
 	@node bin/brain-even.js
-bc:
+calc:
 	@node bin/brain-calc.js
-	@node src/index.js		
+	@node src/index.js
+gcd:
+	@node bin/brain-gcd.js			
 		
