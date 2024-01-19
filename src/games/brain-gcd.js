@@ -20,7 +20,7 @@ export const brainGc = () => {
 
   const brainGcd = () => {
     if (count >= 3) {
-      console.log('Congratulations, ' + userName);
+      console.log(`Congratulations, ${userName}!`);
       return;
     }
 

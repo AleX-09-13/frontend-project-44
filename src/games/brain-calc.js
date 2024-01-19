@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 import { hi } from '../index.js';
-const name2 = hi();
+const userName = hi();
 console.log('What is the result of the expression?');
 export const brainCalk = () => {
   let count = 0; // Счетчик вызовов функции
 
   const request = () => {
     if (count >= 3) {
-      console.log(`Congratulations, ${name2}`);
+      console.log(`Congratulations, ${userName}!`);
       return;
     }
 
@@ -23,7 +23,7 @@ export const brainCalk = () => {
       request(); // Рекурсивный вызов функции
     } else {
       console.log(
-        `${randomNamberAnswer} is wrong answer ;(. Correct answer was ${sum} .Let's try again,${name2}`
+        `${randomNamberAnswer} is wrong answer ;(. Correct answer was ${sum} .Let's try again,${userName}`
       );
     }
   };

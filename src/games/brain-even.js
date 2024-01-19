@@ -6,7 +6,7 @@ let count = 0; // Счетчик вызовов функции
 export const brainEv = () => {
   const request = () => {
     if (count >= 3) {
-      console.log(`Congratulations, ${userName}`);
+      console.log(`Congratulations, ${userName}!`);
       return;
     }
 
@@ -18,7 +18,7 @@ export const brainEv = () => {
       (randomNamber1 % 2 === 0 && randomNamberAnswer === 'yes') ||
       (randomNamber1 % 2 !== 0 && randomNamberAnswer === 'no') // Cравниваем четность числа с ответом пользователя
     ) {
-      console.log('Correct');
+      console.log('Correct!');
       count++; // Увеличиваем счетчик вызовов после правильного ответа
       request(); // Рекурсивный вызов функции
     } else {

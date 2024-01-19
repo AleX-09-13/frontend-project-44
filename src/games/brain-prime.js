@@ -30,7 +30,7 @@ export const brainPrime = () => {
   const randomNamber1 = Math.floor(Math.random() * 10);
   const correctAnswer = isPrime(randomNamber1); // true/folse
   if (count >= 3) {
-    console.log('Congratulations, ' + userName);
+    console.log(`Congratulations, ${userName}!`);
     return;
   }
 

@@ -30,7 +30,7 @@ let count = 0; // Счетчик правильных ответов
 // Функция главная
 export const brainPr = () => {
   if (count >= 3) {
-    console.log('Congratulations, ' + userName);
+    console.log(`Congratulations, ${userName}!`);
     return;
   }
 
