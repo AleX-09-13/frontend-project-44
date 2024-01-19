@@ -18,12 +18,12 @@ export const brainCalk = () => {
     console.log(randomNamber2); //Выводим вопрос
     const randomNamberAnswer = readlineSync.question('Your answer: '); //Получаем ответ, записываем в переменную
     if (parseInt(sum) === parseInt(randomNamberAnswer)) {
-      console.log('Correct');
+      console.log('Correct!');
       count++; // Увеличиваем счетчик вызовов после правильного ответа
       request(); // Рекурсивный вызов функции
     } else {
       console.log(
-        `${randomNamberAnswer} is wrong answer ;(. Correct answer was ${sum} .Let's try again,${userName}`
+        `'${randomNamberAnswer}' is wrong answer ;(. Correct answer was '${sum}' .Let's try again,${userName}!`
       );
     }
   };
