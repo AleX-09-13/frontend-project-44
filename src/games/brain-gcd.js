@@ -46,5 +46,5 @@ export const brainGc = () => {
     return brainGcd(); // Рекурсивный вызов
   };
 
-  brainGcd(); // Начало игры
+  brainGc(); // Начало игры
 };
