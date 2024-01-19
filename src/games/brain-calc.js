@@ -25,7 +25,7 @@ export const brainCalk = () => {
       request(); // Рекурсивный вызов функции
     } else {
       console.log(
-        `'${randomNamberAnswer}' is wrong answer ;(. Correct answer was '${sum}' .Let's try again,${userName}!`
+        `'${randomNamberAnswer}' is wrong answer ;(. Correct answer was '${sum}' .Let's try again, ${userName}!`
       );
     }
   };
