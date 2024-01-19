@@ -10,11 +10,13 @@ export const brainCalk = () => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
+    const operations = ['+', '-', '*'];
+    const operation = operations[Math.floor(Math.random() * operations.length)]; // Выбираем случайную операцию
 
     const randomNamber11 = Math.floor(Math.random() * 10);
     const randomNamber1 = Math.floor(Math.random() * 10); //Получаем рандомное число
-    let sum = randomNamber1 + randomNamber11;
-    let randomNamber2 = `Question:${randomNamber1}+${randomNamber11}`;
+    const sum = eval(`${randomNamber1} ${operation} ${randomNamber11}`);
+    let randomNamber2 = `Question:${randomNamber1}${operation}${randomNamber11}`;
     console.log(randomNamber2); //Выводим вопрос
     const randomNamberAnswer = readlineSync.question('Your answer: '); //Получаем ответ, записываем в переменную
     if (parseInt(sum) === parseInt(randomNamberAnswer)) {
