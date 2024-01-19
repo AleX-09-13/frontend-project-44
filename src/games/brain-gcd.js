@@ -13,14 +13,13 @@ const gcd = (a, b) => {
     return gcd(b, a % b);
   }
 };
-let count = 0; // Счетчик правильных ответов
+let count = 0; // Счетчик запуска функции gcd
 // Функция игры на определение НОД
 export const brainGc = () => {
   if (count >= 3) {
     console.log(`Congratulations, ${userName}!`);
     return;
   }
-
   const randNam1 = Math.floor(Math.random() * 10);
   const randNam2 = Math.floor(Math.random() * 10); //Получаем рандомные числа
   const correctAnswer = gcd(randNam1, randNam2);
@@ -30,7 +29,7 @@ export const brainGc = () => {
   if (parseInt(userAnswer) === correctAnswer) {
     console.log('Correct!');
     count++;
-    return brainGc(); // Рекурсивный вызов
+    brainGc(); // Рекурсивный вызов
   } else {
     return (
       console.log(questionToUser),
@@ -40,6 +39,4 @@ export const brainGc = () => {
       )
     );
   }
-
-  brainGc(); // Начало игры
 };
