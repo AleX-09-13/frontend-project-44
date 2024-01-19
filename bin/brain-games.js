@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-import { hi } from '../index.js';
+import { hi } from '../src/index.js';
 hi();
