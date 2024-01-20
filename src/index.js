@@ -7,4 +7,4 @@ export const hi = () => {
   return userName;
 };
 
-export default hi;
+// export default hi;
