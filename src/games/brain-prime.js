@@ -33,6 +33,7 @@ export const brainPrime = () => {
     console.log(`Congratulations, ${userName}!`);
     return;
   }
+  let exitAnswer = correctAnswer ? 'yes' : 'no';
 
   console.log(`Question: ${randomNamber1}`);
   const userAnswer = readlineSync.question('Your answer: '); // yes/no
@@ -45,6 +46,13 @@ export const brainPrime = () => {
     count++;
     brainPrime();
   } else {
-    return console.log('Not true, bye bye!');
+    return (
+      console.log(`Question: ${randomNamber1}`),
+      console.log(`Your answer: ${userAnswer}`),
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${exitAnswer}'.`
+      ),
+      console.log(`Let's try again, ${userName}!`)
+    );
   }
 };
