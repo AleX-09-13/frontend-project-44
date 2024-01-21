@@ -1,10 +1,12 @@
 import readlineSync from 'readline-sync';
+
 import { hi } from '../index.js';
+
 const userName = hi();
 console.log('What is the result of the expression?');
 
 // Функция игры на умножение
-export const brainCalk = () => {
+const brainCalk = () => {
   let count = 0; // Счетчик вызовов функции
   const request = () => {
     if (count >= 3) {
@@ -33,3 +35,4 @@ export const brainCalk = () => {
 
   request(); // Вызов функции при запуске
 };
+export default brainCalk;

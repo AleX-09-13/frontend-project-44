@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
+
 import { hi } from '../index.js';
+
 const userName = hi();
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
 // Функция проверяет является ли число простым:
 function isPrime(num) {
   if (num <= 1) {
@@ -26,7 +27,7 @@ function isPrime(num) {
 // Завершение функции
 let count = 0; // Счетчик правильных ответов
 // Функция главная
-export const brainPrime = () => {
+const brainPrime = () => {
   const randomNamber1 = Math.floor(Math.random() * 10);
   const correctAnswer = isPrime(randomNamber1); // true/folse
   if (count >= 3) {
@@ -56,3 +57,4 @@ export const brainPrime = () => {
     );
   }
 };
+export default brainPrime;

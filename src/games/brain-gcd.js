@@ -1,10 +1,9 @@
 import readlineSync from 'readline-sync';
+
 import { hi } from '../index.js';
 
 const userName = hi();
-
 console.log('Find the greatest common divisor of given numbers.');
-
 // Функция по нахождению общего делителя
 const gcd = (a, b) => {
   if (b === 0) {
@@ -15,7 +14,7 @@ const gcd = (a, b) => {
 };
 let count = 0; // Счетчик запуска функции gcd
 // Функция игры на определение НОД
-export const brainGc = () => {
+const brainGc = () => {
   if (count >= 3) {
     console.log(`Congratulations, ${userName}!`);
     return;
@@ -41,3 +40,4 @@ export const brainGc = () => {
     );
   }
 };
+export default brainGc;

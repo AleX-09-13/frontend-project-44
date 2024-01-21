@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
+
 import { hi } from '../index.js';
+
 const userName = hi();
 console.log('What number is missing in the progression?');
-
 // Функция для создания рандомной арифметической прогрессии с одним скрытым элементом и рандомной позицией
 const generateRandomArithmeticProgressionWithHiddenElement = () => {
   const length = 7; // Колличество цифр в прогрессии
@@ -28,12 +29,11 @@ const generateRandomArithmeticProgressionWithHiddenElement = () => {
 // Генерация одной рандомной арифметической прогрессии
 let count = 0; // Счетчик правильных ответов
 // Функция главная
-export const brainPr = () => {
+const brainPr = () => {
   if (count >= 3) {
     console.log(`Congratulations, ${userName}!`);
     return;
   }
-
   const prog = generateRandomArithmeticProgressionWithHiddenElement();
   const progression = prog.progression2;
   const correctAnswer = prog.definableNumber;
@@ -54,3 +54,4 @@ export const brainPr = () => {
     );
   }
 };
+export default brainPr;
