@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import { hi } from '../index.js';
+import hi from '../index.js';
 
 const userName = hi();
 console.log('What number is missing in the progression?');
