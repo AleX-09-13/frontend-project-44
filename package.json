@@ -18,9 +18,17 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
     "readline-sync": "^1.4.10"
+  },
+  "extends": "airbnb-base",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-rallycoding": "^3.2.0",
+    "eslint-plugin-jest": "^27.6.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-vue": "^9.20.1",
+    "jest": "^29.7.0"
   }
 }
