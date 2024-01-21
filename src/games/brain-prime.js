@@ -34,7 +34,7 @@ export const brainPrime = () => {
     return;
   }
 
-  console.log('Question:' + randomNamber1);
+  console.log(`Question: ${randomNamber1}`);
   const userAnswer = readlineSync.question('Your answer: '); // yes/no
 
   if (
