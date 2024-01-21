@@ -35,8 +35,9 @@ export const brainGc = () => {
       console.log(questionToUser),
       console.log(`Your answer: ${userAnswer}`),
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.Le's try again, ${userName}!`
-      )
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+      ),
+      console.log(`Le's try again, ${userName}!`)
     );
   }
 };
