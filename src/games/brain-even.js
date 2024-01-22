@@ -5,7 +5,7 @@ import hi from '../index.js';
 const userName = hi();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 let count = 0; // Счетчик вызовов функции
-export const brainEv = () => {
+const brainEv = () => {
   const request = () => {
     if (count >= 3) {
       console.log(`Congratulations, ${userName}!`);
