@@ -17,10 +17,25 @@ const brainCalk = () => {
     const randomNamber11 = Math.floor(Math.random() * 10);
     const randomNamber1 = Math.floor(Math.random() * 10); // Получаем рандомное число
     // const sum = eval(`${randomNamber1} ${operation} ${randomNamber11}`);
-    const sum =
-      parseFloat(randomNamber1) +
-      parseFloat(operation) +
-      parseFloat(randomNamber11);
+    // const sum =
+    //   parseFloat(randomNamber1) +
+    //   parseFloat(operation) +
+    //   parseFloat(randomNamber11);
+    let sum;
+    switch (operation) {
+      case '+':
+        sum = randomNamber1 + randomNamber11;
+        break;
+      case '-':
+        sum = randomNamber1 - randomNamber11;
+        break;
+      case '*':
+        sum = randomNamber1 * randomNamber11;
+        break;
+      default:
+        // Обработка недопустимых операций
+        break;
+    }
     const randomNamber2 = `Question: ${randomNamber1} ${operation} ${randomNamber11}`;
     console.log(randomNamber2); // Выводим вопрос
     const randomNamberAnswer = readlineSync.question('Your answer: '); // Получаем ответ, записываем в переменную
