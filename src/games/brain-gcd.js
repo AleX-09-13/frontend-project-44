@@ -12,9 +12,10 @@ const gcd = (a, b) => {
     return gcd(b, a % b);
   }
 };
-let count = 0; // Счетчик запуска функции gcd
+// Счетчик запуска функции gcd
 // Функция игры на определение НОД
-const brainGc = () => {
+let count = 0;
+const brainGc = (a) => {
   if (count >= 3) {
     console.log(`Congratulations, ${userName}!`);
     return;
@@ -27,8 +28,8 @@ const brainGc = () => {
   const userAnswer = readlineSync.question('Your answer: ');
   if (parseInt(userAnswer) === correctAnswer) {
     console.log('Correct!');
-    count += count;
-    brainGc(); // Рекурсивный вызов
+    count += 1;
+    brainGc(count); // Рекурсивный вызов
   } else {
     return (
       console.log(questionToUser),
