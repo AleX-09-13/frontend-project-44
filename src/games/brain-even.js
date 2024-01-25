@@ -12,7 +12,7 @@ const brainEv = () => {
       return;
     }
     const randomNamber1 = Math.floor(Math.random() * 10); // Получаем рандомное число
-    const randomNamber2 = `Question: '${randomNamber1}`;
+    const randomNamber2 = `Question: ${randomNamber1}`;
     console.log(randomNamber2); // Выводим вопрос
     const randomNamberAnswer = readlineSync.question('Your answer: '); // Получаем ответ, записываем в переменную
     if (
