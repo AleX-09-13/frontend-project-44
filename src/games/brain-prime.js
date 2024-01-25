@@ -13,7 +13,6 @@ function isPrime(num) {
   } else if (num % 2 === 0 || num % 3 === 0) {
     return false;
   }
-
   let i = 5;
   while (i * i <= num) {
     if (num % i === 0 || num % (i + 2) === 0) {
@@ -35,10 +34,8 @@ const brainPrime = () => {
     return;
   }
   let exitAnswer = correctAnswer ? 'yes' : 'no';
-
   console.log(`Question: ${randomNamber1}`);
   const userAnswer = readlineSync.question('Your answer: '); // yes/no
-
   if (
     (correctAnswer === true && userAnswer === 'yes') ||
     (correctAnswer === false && userAnswer === 'no')

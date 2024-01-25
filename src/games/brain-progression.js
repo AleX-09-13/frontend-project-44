@@ -24,7 +24,6 @@ const generateRandomArithmeticProgressionWithHiddenElement = () => {
   let progression2 = progression.join(' '); // заменяем запятые на пробелы
   return { progression2, definableNumber };
 };
-
 // Завершение функции
 // Генерация одной рандомной арифметической прогрессии
 let count = 0; // Счетчик правильных ответов

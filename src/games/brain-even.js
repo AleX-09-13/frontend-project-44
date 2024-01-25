@@ -11,7 +11,6 @@ const brainEv = () => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-
     const randomNamber1 = Math.floor(Math.random() * 10); //Получаем рандомное число
     const randomNamber2 = 'Question: ' + randomNamber1;
     console.log(randomNamber2); //Выводим вопрос
@@ -29,7 +28,6 @@ const brainEv = () => {
       );
     }
   };
-
   request(); // Вызов функции при запуске
 };
 export default brainEv;

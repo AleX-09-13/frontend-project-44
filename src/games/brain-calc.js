@@ -4,7 +4,6 @@ import hi from '../index.js';
 
 const userName = hi();
 console.log('What is the result of the expression?');
-
 // Функция игры на умножение
 const brainCalk = () => {
   let count = 0; // Счетчик вызовов функции
@@ -15,7 +14,6 @@ const brainCalk = () => {
     }
     const operations = ['+', '-', '*'];
     const operation = operations[Math.floor(Math.random() * operations.length)]; // Выбираем случайную операцию
-
     const randomNamber11 = Math.floor(Math.random() * 10);
     const randomNamber1 = Math.floor(Math.random() * 10); //Получаем рандомное число
     const sum = eval(`${randomNamber1} ${operation} ${randomNamber11}`);
@@ -32,7 +30,6 @@ const brainCalk = () => {
       );
     }
   };
-
   request(); // Вызов функции при запуске
 };
 export default brainCalk;
