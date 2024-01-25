@@ -20,21 +20,21 @@ const brainGc = () => {
     return;
   }
   const randNam1 = Math.floor(Math.random() * 10);
-  const randNam2 = Math.floor(Math.random() * 10); //Получаем рандомные числа
+  const randNam2 = Math.floor(Math.random() * 10); // Получаем рандомные числа
   const correctAnswer = gcd(randNam1, randNam2);
   const questionToUser = `Question: ${randNam1} ${randNam2}`;
   console.log(questionToUser);
   const userAnswer = readlineSync.question('Your answer: ');
   if (parseInt(userAnswer) === correctAnswer) {
     console.log('Correct!');
-    count++;
+    count += count;
     brainGc(); // Рекурсивный вызов
   } else {
     return (
       console.log(questionToUser),
       console.log(`Your answer: ${userAnswer}`),
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`
       ),
       console.log(`Let's try again, ${userName}!`)
     );

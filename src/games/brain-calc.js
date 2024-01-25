@@ -13,16 +13,16 @@ const brainCalk = () => {
       return;
     }
     const operations = ['+', '-', '*'];
-    const operation = operations[Math.floor(Math.random() * operations.length)]; // Выбираем случайную операцию
+    const operation = operations[Math.floor(Math.random() * operations.length)]; // Выб случ опер
     const randomNamber11 = Math.floor(Math.random() * 10);
-    const randomNamber1 = Math.floor(Math.random() * 10); //Получаем рандомное число
+    const randomNamber1 = Math.floor(Math.random() * 10); // Получаем рандомное число
     const sum = eval(`${randomNamber1} ${operation} ${randomNamber11}`);
-    let randomNamber2 = `Question: ${randomNamber1} ${operation} ${randomNamber11}`;
-    console.log(randomNamber2); //Выводим вопрос
-    const randomNamberAnswer = readlineSync.question('Your answer: '); //Получаем ответ, записываем в переменную
+    const randomNamber2 = `Question: ${randomNamber1} ${operation} ${randomNamber11}`;
+    console.log(randomNamber2); // Выводим вопрос
+    const randomNamberAnswer = readlineSync.question('Your answer: '); // Получаем ответ, записываем в переменную
     if (parseInt(sum) === parseInt(randomNamberAnswer)) {
       console.log('Correct!');
-      count++; // Увеличиваем счетчик вызовов после правильного ответа
+      count += 1; // Увеличиваем счетчик вызовов после правильного ответа
       request(); // Рекурсивный вызов функции
     } else {
       console.log(
