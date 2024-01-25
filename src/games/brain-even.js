@@ -20,7 +20,7 @@ const brainEv = () => {
       (randomNamber1 % 2 !== 0 && randomNamberAnswer === 'no') // Cравниваем четность числа с ответом пользователя
     ) {
       console.log('Correct!');
-      count += count; // Увеличиваем счетчик вызовов после правильного ответа
+      count += 1; // Увеличиваем счетчик вызовов после правильного ответа
       request(); // Рекурсивный вызов функции
     } else {
       console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");

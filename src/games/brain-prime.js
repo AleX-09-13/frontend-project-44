@@ -41,7 +41,7 @@ const brainPrime = () => {
     (correctAnswer === false && userAnswer === 'no')
   ) {
     console.log('Correct!');
-    count++;
+    count += 1;
     brainPrime();
   } else {
     return (
