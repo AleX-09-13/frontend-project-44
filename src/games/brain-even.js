@@ -23,9 +23,8 @@ const brainEv = () => {
       count += count; // Увеличиваем счетчик вызовов после правильного ответа
       request(); // Рекурсивный вызов функции
     } else {
-      console.log(
-        `'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${userName}!`
-      );
+      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+      console.log(`Let's try again, ${userName}!`);
     }
   };
   request(); // Вызов функции при запуске
