@@ -16,11 +16,15 @@ const brainCalk = () => {
     const operation = operations[Math.floor(Math.random() * operations.length)]; // Выб случ опер
     const randomNamber11 = Math.floor(Math.random() * 10);
     const randomNamber1 = Math.floor(Math.random() * 10); // Получаем рандомное число
-    const sum = eval(`${randomNamber1} ${operation} ${randomNamber11}`);
+    // const sum = eval(`${randomNamber1} ${operation} ${randomNamber11}`);
+    const sum =
+      parseFloat(randomNamber1) +
+      parseFloat(operation) +
+      parseFloat(randomNamber11);
     const randomNamber2 = `Question: ${randomNamber1} ${operation} ${randomNamber11}`;
     console.log(randomNamber2); // Выводим вопрос
     const randomNamberAnswer = readlineSync.question('Your answer: '); // Получаем ответ, записываем в переменную
-    if (parseInt(sum) === parseInt(randomNamberAnswer)) {
+    if (parseInt(sum, 10) === parseInt(randomNamberAnswer, 10)) {
       console.log('Correct!');
       count += 1; // Увеличиваем счетчик вызовов после правильного ответа
       request(); // Рекурсивный вызов функции

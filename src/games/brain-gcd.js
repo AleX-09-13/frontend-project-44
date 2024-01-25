@@ -26,7 +26,7 @@ const brainGc = (a) => {
   const questionToUser = `Question: ${randNam1} ${randNam2}`;
   console.log(questionToUser);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer) === correctAnswer) {
+  if (parseInt(userAnswer, 10) === correctAnswer) {
     console.log('Correct!');
     count += 1;
     brainGc(count); // Рекурсивный вызов

@@ -38,7 +38,7 @@ const brainPr = () => {
   const correctAnswer = prog.definableNumber;
   console.log(`Question: ${progression}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer) === correctAnswer) {
+  if (parseInt(userAnswer, 10) === correctAnswer) {
     console.log('Correct!');
     count += 1;
     brainPr();

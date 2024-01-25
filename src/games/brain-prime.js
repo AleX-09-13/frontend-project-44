@@ -33,7 +33,7 @@ const brainPrime = () => {
     console.log(`Congratulations, ${userName}!`);
     return;
   }
-  let exitAnswer = correctAnswer ? 'yes' : 'no';
+  const exitAnswer = correctAnswer ? 'yes' : 'no';
   console.log(`Question: ${randomNamber1}`);
   const userAnswer = readlineSync.question('Your answer: '); // yes/no
   if (
