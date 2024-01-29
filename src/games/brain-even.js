@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 
 import hi from '../index.js';
 
+const isEven = (num) => num % 2 === 0; // Функция определения четн. числа, ответ false / true
 const userName = hi();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 let count = 0; // Счетчик вызовов функции
@@ -15,10 +16,9 @@ const brainEv = () => {
     const randomNamber2 = `Question: ${randomNamber1}`;
     console.log(randomNamber2); // Выводим вопрос
     const randomNamberAnswer = readlineSync.question('Your answer: '); // Получаем ответ, записываем в переменную
-    if (
-      (randomNamber1 % 2 === 0 && randomNamberAnswer === 'yes') ||
-      (randomNamber1 % 2 !== 0 && randomNamberAnswer === 'no') // Cравниваем четность числа с ответом пользователя
-    ) {
+    const rightAnswer = isEven(randomNamber1) ? 'yes' : 'no'; //  Числу добавляем описание
+    if (rightAnswer === randomNamberAnswer) {
+      // Сравниваем описание с ответом пользователя
       console.log('Correct!');
       count += 1; // Увеличиваем счетчик вызовов после правильного ответа
       request(); // Рекурсивный вызов функции
