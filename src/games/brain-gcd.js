@@ -8,14 +8,13 @@ console.log('Find the greatest common divisor of given numbers.');
 const gcd = (a, b) => {
   if (b === 0) {
     return a;
-  } else {
-    return gcd(b, a % b);
   }
+  return gcd(b, a % b);
 };
 // Счетчик запуска функции gcd
-// Функция игры на определение НОД
 let count = 0;
-const brainGc = (a) => {
+// Функция игры на определение НОД
+const brainGc = () => {
   if (count >= 3) {
     console.log(`Congratulations, ${userName}!`);
     return;
@@ -30,15 +29,14 @@ const brainGc = (a) => {
     console.log('Correct!');
     count += 1;
     brainGc(count); // Рекурсивный вызов
-  } else {
+  } else if (parseInt(userAnswer, 10) !== correctAnswer)
     return (
       console.log(questionToUser),
       console.log(`Your answer: ${userAnswer}`),
       console.log(
-        `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`
+        `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`,
       ),
       console.log(`Let's try again, ${userName}!`)
     );
-  }
 };
 export default brainGc;
