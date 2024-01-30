@@ -29,7 +29,8 @@ const brainGc = () => {
     console.log('Correct!');
     count += 1;
     brainGc(count); // Рекурсивный вызов
-  } else if (parseInt(userAnswer, 10) !== correctAnswer)
+  } else {
+    parseInt(userAnswer, 10) !== correctAnswer;
     return (
       console.log(questionToUser),
       console.log(`Your answer: ${userAnswer}`),
@@ -38,5 +39,6 @@ const brainGc = () => {
       ),
       console.log(`Let's try again, ${userName}!`)
     );
+  }
 };
 export default brainGc;
