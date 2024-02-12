@@ -4,7 +4,8 @@
   "description": "[![Actions Status](https://github.com/AleX-09-13/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AleX-09-13/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon ./bin/pr2.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
+    "nodemon": "^3.0.3",
     "readline-sync": "^1.4.10"
   },
   "extends": "airbnb-base",

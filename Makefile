@@ -16,4 +16,7 @@ prime:
 	@node bin/brain-prime.js		
 lint:
 	npx eslint 
-		
+p:
+	@node bin/pr.js	
+calc2:
+	@node bin/brain-calc2.js
