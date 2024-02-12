@@ -2,31 +2,29 @@ import readlineSync from 'readline-sync';
 
 const RunGame = () => {
   const question = 'What is the result of the expression?';
-  function calc() {
-    const operations = ['+', '-', '*'];
-    const operationIndex = Math.floor(Math.random() * operations.length);
-    const randomNamber1 = Math.floor(Math.random() * 10);
-    const randomNamber2 = Math.floor(Math.random() * 10);
-    const operation = operations[operationIndex];
-    const question_two = `${randomNamber1} ${operation} ${randomNamber2}`;
-    let right_answer;
-    switch (operation) {
-      case '+':
-        right_answer = randomNamber1 + randomNamber2;
-        break;
-      case '-':
-        right_answer = randomNamber1 - randomNamber2;
-        break;
-      case '*':
-        right_answer = randomNamber1 * randomNamber2;
-        break;
-      default:
-        return '';
-    }
-    return { right_answer, question, question_two };
+  const operations = ['+', '-', '*'];
+  const operationIndex = Math.floor(Math.random() * operations.length);
+  const randomNamber1 = Math.floor(Math.random() * 10);
+  const randomNamber2 = Math.floor(Math.random() * 10);
+  const operation = operations[operationIndex];
+  const question_two = `${randomNamber1} ${operation} ${randomNamber2}`;
+  let right_answer;
+  switch (operation) {
+    case '+':
+      right_answer = randomNamber1 + randomNamber2;
+      break;
+    case '-':
+      right_answer = randomNamber1 - randomNamber2;
+      break;
+    case '*':
+      right_answer = randomNamber1 * randomNamber2;
+      break;
+    default:
+      return '';
   }
-  return calc;
+  return { right_answer, question, question_two };
 };
+
 // Движок
 const driver = (runGameFunction) => {
   console.log('Welcome to the Brain Games!');
@@ -36,9 +34,11 @@ const driver = (runGameFunction) => {
   const gameResult = runGameFunction();
   console.log(gameResult.question);
 
-  let right_answer = gameResult.right_answer;
+  // Цикл
   let count = 0;
   function program_execution() {
+    const gameResult = runGameFunction();
+    let right_answer = gameResult.right_answer;
     if (count >= 3) {
       console.log(`Congratulations, ${userName}!`);
       return;
@@ -62,4 +62,4 @@ const driver = (runGameFunction) => {
 };
 
 // Вызов функции driver с передачей функции RunGame
-driver(RunGame());
+driver(RunGame);
