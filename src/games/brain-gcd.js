@@ -9,7 +9,8 @@ const RunGame = () => {
   };
   const randomNamber1 = Math.floor(Math.random() * 10);
   const randomNamber2 = Math.floor(Math.random() * 10); // Получаем рандомные числа
-  const rightAnswer = gcd(randomNamber1, randomNamber2);
+  const rightAnswer1 = gcd(randomNamber1, randomNamber2);
+  const rightAnswer = rightAnswer1.toString();
   const questionTwo = `${randomNamber1} ${randomNamber2}`;
   // console.log(question_two);
   return { rightAnswer, question, questionTwo };
