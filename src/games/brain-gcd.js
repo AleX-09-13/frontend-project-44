@@ -1,44 +1,18 @@
-import readlineSync from 'readline-sync';
-
-import hi from '../index.js';
-
-const userName = hi();
-console.log('Find the greatest common divisor of given numbers.');
-// Функция по нахождению общего делителя
-const gcd = (a, b) => {
-  if (b === 0) {
-    return a;
-  }
-  return gcd(b, a % b);
+const RunGame = () => {
+  const question = 'Find the greatest common divisor of given numbers.';
+  // Функция по нахождению общего делителя
+  const gcd = (a, b) => {
+    if (b === 0) {
+      return a;
+    }
+    return gcd(b, a % b);
+  };
+  let randomNamber1 = Math.floor(Math.random() * 10);
+  let randomNamber2 = Math.floor(Math.random() * 10); // Получаем рандомные числа
+  const right_answer = gcd(randomNamber1, randomNamber2);
+  let question_two = `${randomNamber1} ${randomNamber2}`;
+  // console.log(question_two);
+  return { right_answer, question, question_two };
 };
-// Счетчик запуска функции gcd
-let count = 0;
-// Функция игры на определение НОД
-const brainGc = () => {
-  if (count >= 3) {
-    console.log(`Congratulations, ${userName}!`);
-    return;
-  }
-  const randNam1 = Math.floor(Math.random() * 10);
-  const randNam2 = Math.floor(Math.random() * 10); // Получаем рандомные числа
-  const correctAnswer = gcd(randNam1, randNam2);
-  const questionToUser = `Question: ${randNam1} ${randNam2}`;
-  console.log(questionToUser);
-  const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer, 10) === correctAnswer) {
-    console.log('Correct!');
-    count += 1;
-    brainGc(count); // Рекурсивный вызов
-  } else {
-    parseInt(userAnswer, 10) !== correctAnswer;
-    return (
-      console.log(questionToUser),
-      console.log(`Your answer: ${userAnswer}`),
-      console.log(
-        `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`,
-      ),
-      console.log(`Let's try again, ${userName}!`)
-    );
-  }
-};
-export default brainGc;
+export default RunGame;
+// RunGame();

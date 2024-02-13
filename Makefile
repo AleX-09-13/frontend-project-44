@@ -14,13 +14,3 @@ prog:
 	@node bin/brain-progression.js
 prime:
 	@node bin/brain-prime.js		
-lint:
-	npx eslint 
-p:
-	@node bin/pr.js	
-calc2:
-	@node bin/brain-calc2.js
-even2:
-	@node bin/brain-even2.js
-gcd2:
-	@node bin/brain-gcd2.js

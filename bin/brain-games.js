@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import hi from '../src/index.js';
+import driver from '../src/index.js';
 
-hi();
+driver();

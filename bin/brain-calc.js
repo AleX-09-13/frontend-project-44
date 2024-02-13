@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import brainCalk from '../src/games/brain-calc.js';
+import RunGame from '../src/games/brain-calc.js';
+import driver from '../src/index.js';
 
-brainCalk();
+driver(RunGame);

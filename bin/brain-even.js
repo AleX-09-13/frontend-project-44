@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import brainEv from '../src/games/brain-even.js';
+import RunGame from '../src/games/brain-even.js';
+import driver from '../src/index.js';
 
-brainEv();
+driver(RunGame);

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import brainGc from '../src/games/brain-gcd.js';
+import RunGame from '../src/games/brain-gcd.js';
+import driver from '../src/index.js';
 
-brainGc();
+driver(RunGame);

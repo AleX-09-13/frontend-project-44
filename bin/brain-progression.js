@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import brainPr from '../src/games/brain-progression.js';
+import RunGame from '../src/games/brain-progression.js';
+import driver from '../src/index.js';
 
-brainPr();
+driver(RunGame);
