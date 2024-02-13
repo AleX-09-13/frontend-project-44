@@ -24,7 +24,8 @@ const RunGame = () => {
   const prog = genPr();
   const progression = prog.progression2;
   const questionTwo = `${progression}`;
-  const rightAnswer = prog.definableNumber;
+  const rightAnswer1 = prog.definableNumber;
+  const rightAnswer = rightAnswer1.toString();
   return { rightAnswer, question, questionTwo };
 };
 export default RunGame;
