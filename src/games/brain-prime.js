@@ -25,9 +25,9 @@ const RunGame = () => {
   // Завершение функции
 
   const randomNamber = Math.floor(Math.random() * 10);
-  const right_answer = isPrime(randomNamber) ? 'yes' : 'no';
-  let question_two = `${randomNamber}`;
+  const rightAnswer = isPrime(randomNamber) ? 'yes' : 'no';
+  let questionTwo = `${randomNamber}`;
 
-  return { right_answer, question, question_two };
+  return { rightAnswer, question, questionTwo };
 };
 export default RunGame;

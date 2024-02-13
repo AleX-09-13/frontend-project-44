@@ -9,10 +9,10 @@ const RunGame = () => {
   };
   let randomNamber1 = Math.floor(Math.random() * 10);
   let randomNamber2 = Math.floor(Math.random() * 10); // Получаем рандомные числа
-  const right_answer = gcd(randomNamber1, randomNamber2);
-  let question_two = `${randomNamber1} ${randomNamber2}`;
+  const rightAnswer = gcd(randomNamber1, randomNamber2);
+  let questionTwo = `${randomNamber1} ${randomNamber2}`;
   // console.log(question_two);
-  return { right_answer, question, question_two };
+  return { rightAnswer, question, questionTwo };
 };
 export default RunGame;
 // RunGame();

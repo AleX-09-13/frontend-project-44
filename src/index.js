@@ -13,20 +13,20 @@ const driver = (runGameFunction) => {
   let count = 0;
   function program_execution() {
     const gameResult = runGameFunction();
-    let right_answer = gameResult.right_answer;
+    let rightAnswer = gameResult.rightAnswer;
     if (count >= 3) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    console.log(`Question: ${gameResult.question_two}`);
+    console.log(`Question: ${gameResult.questionTwo}`);
     const your_answer = readlineSync.question('Your answer: ');
-    if (right_answer == your_answer) {
+    if (rightAnswer == your_answer) {
       console.log('Correct!');
       count += 1; // Увеличиваем счетчик вызовов после правильного ответа
       program_execution();
     } else {
       console.log(
-        `your_answer is wrong answer ;(. Correct answer "${right_answer}".`,
+        `your_answer is wrong answer ;(. Correct answer "${rightAnswer}".`,
       );
       console.log(`Let's try again, ${userName}!`);
     }

@@ -6,22 +6,22 @@ const RunGame = () => {
   const randomNamber1 = Math.floor(Math.random() * 10);
   const randomNamber2 = Math.floor(Math.random() * 10);
   const operation = operations[operationIndex];
-  const question_two = `${randomNamber1} ${operation} ${randomNamber2}`;
-  let right_answer;
+  const questionTwo = `${randomNamber1} ${operation} ${randomNamber2}`;
+  let rightAnswer;
   switch (operation) {
     case '+':
-      right_answer = randomNamber1 + randomNamber2;
+      rightAnswer = randomNamber1 + randomNamber2;
       break;
     case '-':
-      right_answer = randomNamber1 - randomNamber2;
+      rightAnswer = randomNamber1 - randomNamber2;
       break;
     case '*':
-      right_answer = randomNamber1 * randomNamber2;
+      rightAnswer = randomNamber1 * randomNamber2;
       break;
     default:
       return '';
   }
-  return { right_answer, question, question_two };
+  return { rightAnswer, question, questionTwo };
 };
 
 export default RunGame;
