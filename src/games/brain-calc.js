@@ -21,7 +21,7 @@ const RunGame = () => {
     default:
       return '';
   }
-  let rightAnswer = rightAnswer1.toString();
+  const rightAnswer = rightAnswer1.toString();
   return { rightAnswer, question, questionTwo };
 };
 

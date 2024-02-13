@@ -10,13 +10,13 @@ const driver = (runGameFunction) => {
   // Цикл
   let count = 0;
   function programExecution() {
-    const gameResult = runGameFunction();
-    const rightAnswer = gameResult.rightAnswer;
+    const gameResult2 = runGameFunction();
+    const { rightAnswer } = gameResult2;
     if (count >= 3) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    console.log(`Question: ${gameResult.questionTwo}`);
+    console.log(`Question: ${gameResult2.questionTwo}`);
     const yourAnswer = readlineSync.question('Your answer: ');
     if (rightAnswer === yourAnswer) {
       console.log('Correct!');
