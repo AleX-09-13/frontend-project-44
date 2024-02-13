@@ -28,7 +28,7 @@ const driver = (runGameFunction) => {
       console.log(
         `your_answer is wrong answer ;(. Correct answer "${right_answer}".`,
       );
-      console.log(`Letś try again, ${userName}!`);
+      console.log(`Let's try again, ${userName}!`);
     }
   }
   program_execution();
