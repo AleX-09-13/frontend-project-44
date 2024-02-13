@@ -5,15 +5,13 @@ const driver = (runGameFunction) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-
   const gameResult = runGameFunction();
   console.log(gameResult.question);
-
   // Цикл
   let count = 0;
-  function program_execution() {
+  function programExecution() {
     const gameResult = runGameFunction();
-    let rightAnswer = gameResult.rightAnswer;
+    const rightAnswer = gameResult.rightAnswer;
     if (count >= 3) {
       console.log(`Congratulations, ${userName}!`);
       return;
@@ -23,7 +21,7 @@ const driver = (runGameFunction) => {
     if (rightAnswer == your_answer) {
       console.log('Correct!');
       count += 1; // Увеличиваем счетчик вызовов после правильного ответа
-      program_execution();
+      programExecution();
     } else {
       console.log(
         `your_answer is wrong answer ;(. Correct answer "${rightAnswer}".`,
@@ -31,8 +29,7 @@ const driver = (runGameFunction) => {
       console.log(`Let's try again, ${userName}!`);
     }
   }
-  program_execution();
-
+  programExecution();
   return userName;
 };
 

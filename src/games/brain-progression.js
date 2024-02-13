@@ -1,10 +1,9 @@
 const RunGame = () => {
   const question = 'What number is missing in the progression?';
-
   // Ф-я для создания рандомной ариф-ой прогрессии с одним скрытым элементом и ранд-й поз.
   const genPr = () => {
     const length = 7; // Колличество цифр в прогрессии
-    const hiddenIndex = Math.floor(Math.random() * length); // выбм раню позицию для скрытого элемента
+    const hiddenIndex = Math.floor(Math.random() * length); // выбм раню позицию для ск эл.
     const progression = [];
     let definableNumber;
     const start = Math.floor(Math.random() * 10);
@@ -22,13 +21,11 @@ const RunGame = () => {
     return { progression2, definableNumber };
   };
   // Завершение функции
-
   const prog = genPr();
   const progression = prog.progression2;
   const correctAnswer = prog.definableNumber;
   const questionTwo = `${progression}`;
   const rightAnswer = prog.definableNumber;
-
   return { rightAnswer, question, questionTwo };
 };
 export default RunGame;

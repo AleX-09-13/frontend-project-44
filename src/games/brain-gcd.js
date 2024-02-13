@@ -7,10 +7,10 @@ const RunGame = () => {
     }
     return gcd(b, a % b);
   };
-  let randomNamber1 = Math.floor(Math.random() * 10);
-  let randomNamber2 = Math.floor(Math.random() * 10); // Получаем рандомные числа
+  const randomNamber1 = Math.floor(Math.random() * 10);
+  const randomNamber2 = Math.floor(Math.random() * 10); // Получаем рандомные числа
   const rightAnswer = gcd(randomNamber1, randomNamber2);
-  let questionTwo = `${randomNamber1} ${randomNamber2}`;
+  const questionTwo = `${randomNamber1} ${randomNamber2}`;
   // console.log(question_two);
   return { rightAnswer, question, questionTwo };
 };

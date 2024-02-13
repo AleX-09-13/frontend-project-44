@@ -1,8 +1,6 @@
 const RunGame = () => {
   const question =
     'Answer "yes" if given number is prime. Otherwise answer "no".';
-  // Функция по нахождению общего делителя
-
   // Функция проверяет является ли число простым:
   function isPrime(num) {
     if (num <= 1) {
@@ -23,11 +21,9 @@ const RunGame = () => {
     return true;
   }
   // Завершение функции
-
   const randomNamber = Math.floor(Math.random() * 10);
   const rightAnswer = isPrime(randomNamber) ? 'yes' : 'no';
   let questionTwo = `${randomNamber}`;
-
   return { rightAnswer, question, questionTwo };
 };
 export default RunGame;
