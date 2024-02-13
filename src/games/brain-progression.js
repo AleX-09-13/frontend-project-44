@@ -23,7 +23,6 @@ const RunGame = () => {
   // Завершение функции
   const prog = genPr();
   const progression = prog.progression2;
-  const correctAnswer = prog.definableNumber;
   const questionTwo = `${progression}`;
   const rightAnswer = prog.definableNumber;
   return { rightAnswer, question, questionTwo };

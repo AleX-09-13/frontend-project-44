@@ -4,9 +4,11 @@ const RunGame = () => {
   function isPrime(num) {
     if (num <= 1) {
       return false;
-    } else if (num <= 3) {
+    }
+    if (num <= 3) {
       return true;
-    } else if (num % 2 === 0 || num % 3 === 0) {
+    }
+    if (num % 2 === 0 || num % 3 === 0) {
       return false;
     }
     let i = 5;
@@ -19,9 +21,9 @@ const RunGame = () => {
     return true;
   }
   // Завершение функции
-  const randomNamber = Math.floor(Math.random() * 10);
-  const rightAnswer = isPrime(randomNamber) ? "yes" : "no";
-  const questionTwo = `${randomNamber}`;
+  const randomNumber = Math.floor(Math.random() * 10);
+  const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+  const questionTwo = `${randomNumber}`;
   return { rightAnswer, question, questionTwo };
 };
 export default RunGame;

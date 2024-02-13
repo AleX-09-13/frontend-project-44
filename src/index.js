@@ -1,9 +1,9 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 // Движок
 const driver = (runGameFunction) => {
-  console.log("Welcome to the Brain Games!");
-  const userName = readlineSync.question("May I have your name? ");
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   const gameResult = runGameFunction();
   console.log(gameResult.question);
@@ -17,9 +17,9 @@ const driver = (runGameFunction) => {
       return;
     }
     console.log(`Question: ${gameResult.questionTwo}`);
-    const yourAnswer = readlineSync.question("Your answer: ");
-    if (rightAnswer == yourAnswer) {
-      console.log("Correct!");
+    const yourAnswer = readlineSync.question('Your answer: ');
+    if (rightAnswer === yourAnswer) {
+      console.log('Correct!');
       count += 1; // Увеличиваем счетчик вызовов после правильного ответа
       programExecution();
     } else {

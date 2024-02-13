@@ -7,20 +7,21 @@ const RunGame = () => {
   const randomNamber2 = Math.floor(Math.random() * 10);
   const operation = operations[operationIndex];
   const questionTwo = `${randomNamber1} ${operation} ${randomNamber2}`;
-  let rightAnswer;
+  let rightAnswer1;
   switch (operation) {
     case '+':
-      rightAnswer = randomNamber1 + randomNamber2;
+      rightAnswer1 = randomNamber1 + randomNamber2;
       break;
     case '-':
-      rightAnswer = randomNamber1 - randomNamber2;
+      rightAnswer1 = randomNamber1 - randomNamber2;
       break;
     case '*':
-      rightAnswer = randomNamber1 * randomNamber2;
+      rightAnswer1 = randomNamber1 * randomNamber2;
       break;
     default:
       return '';
   }
+  let rightAnswer = rightAnswer1.toString();
   return { rightAnswer, question, questionTwo };
 };
 
