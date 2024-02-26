@@ -1,6 +1,5 @@
 const RunGame = () => {
   const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  // Функция проверяет является ли число простым:
   function isPrime(num) {
     if (num <= 1) {
       return false;
@@ -20,7 +19,6 @@ const RunGame = () => {
     }
     return true;
   }
-  // Завершение функции
   const randomNumber = Math.floor(Math.random() * 10);
   const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   const questionTwo = `${randomNumber}`;
