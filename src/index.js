@@ -7,7 +7,7 @@ const driver = (runGameFunction) => {
   const gameResult = runGameFunction();
   console.log(gameResult.question);
   let count = 0;
-  function programExecution() {
+  while (count < 3) {
     const gameResult2 = runGameFunction();
     const { rightAnswer } = gameResult2;
     if (count >= 3) {
@@ -19,13 +19,12 @@ const driver = (runGameFunction) => {
     if (rightAnswer === yourAnswer) {
       console.log('Correct!');
       count += 1;
-      programExecution();
     } else {
       console.log(`your_answer is wrong answer ;(. Correct answer "${rightAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
+      break;
     }
   }
-  programExecution();
   return userName;
 };
 

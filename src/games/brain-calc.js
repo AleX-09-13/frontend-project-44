@@ -1,5 +1,5 @@
 import driver from '../index.js';
-import getRandomNumber from './RandomNumber';
+import getRandomNumber from './RandomNumber.js';
 
 const calculation = (randomNamber1, randomNamber2, operation) => {
   let rightAnswer;
