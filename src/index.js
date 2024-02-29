@@ -1,4 +1,4 @@
-import readlineSync, { question } from 'readline-sync';
+import readlineSync from 'readline-sync';
 
 const driver = (runGame, question) => {
   console.log('Welcome to the Brain Games!');

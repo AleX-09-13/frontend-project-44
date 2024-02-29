@@ -28,7 +28,7 @@ const RunGame = () => {
   const questionTwo = `${randomNamber1} ${operation} ${randomNamber2}`;
   let rightAnswer1 = calculation(randomNamber1, randomNamber2, operation);
   const rightAnswer = rightAnswer1.toString();
-  return { rightAnswer, question, questionTwo };
+  return { rightAnswer, questionTwo };
 };
 const Start = () => driver(RunGame, question);
 

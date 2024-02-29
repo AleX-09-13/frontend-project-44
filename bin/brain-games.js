@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import driver from '../src/index.js';
+import Start from '../src/index.js';
 
-driver();
+Start();
