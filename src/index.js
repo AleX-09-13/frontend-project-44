@@ -11,7 +11,7 @@ const driver = (runGame, question) => {
     const { rightAnswer } = gameResult2;
     if (count >= 3) {
       console.log(`Congratulations, ${userName}!`);
-      return;
+      break;
     }
     console.log(`Question: ${gameResult2.questionTwo}`);
     const yourAnswer = readlineSync.question('Your answer: ');
@@ -20,10 +20,10 @@ const driver = (runGame, question) => {
       count += 1;
     } else {
       console.log(`your_answer is wrong answer ;(. Correct answer "${rightAnswer}".`);
-      console.log(`Let's try again, ${userName}!`);
       break;
     }
   }
+  console.log(`Let's try again, ${userName}!`);
   return userName;
 };
 
