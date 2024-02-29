@@ -26,7 +26,7 @@ const RunGame = () => {
   const randomNamber2 = getRandomNumber();
   const operation = operations[operationIndex];
   const questionTwo = `${randomNamber1} ${operation} ${randomNamber2}`;
-  let rightAnswer1 = calculation(randomNamber1, randomNamber2, operation);
+  const rightAnswer1 = calculation(randomNamber1, randomNamber2, operation);
   const rightAnswer = rightAnswer1.toString();
   return { rightAnswer, questionTwo };
 };
