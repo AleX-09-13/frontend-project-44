@@ -18,8 +18,8 @@ const calculation = (randomNamber1, randomNamber2, operation) => {
   }
   return rightAnswer;
 };
+const question = 'What is the result of the expression?';
 const RunGame = () => {
-  const question = 'What is the result of the expression?';
   const operations = ['+', '-', '*'];
   const operationIndex = Math.floor(Math.random() * operations.length);
   const randomNamber1 = getRandomNumber();
@@ -30,7 +30,6 @@ const RunGame = () => {
   const rightAnswer = rightAnswer1.toString();
   return { rightAnswer, question, questionTwo };
 };
-const startCalcGame = driver;
-const Start = startCalcGame(RunGame);
+const Start = () => driver(RunGame, question);
 
 export default Start;

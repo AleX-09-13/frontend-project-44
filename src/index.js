@@ -1,14 +1,13 @@
-import readlineSync from 'readline-sync';
+import readlineSync, { question } from 'readline-sync';
 
-const driver = (runGameFunction) => {
+const driver = (runGame, question) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  const gameResult = runGameFunction();
-  console.log(gameResult.question);
+  console.log(question);
   let count = 0;
   while (count < 3) {
-    const gameResult2 = runGameFunction();
+    const gameResult2 = runGame();
     const { rightAnswer } = gameResult2;
     if (count >= 3) {
       console.log(`Congratulations, ${userName}!`);
