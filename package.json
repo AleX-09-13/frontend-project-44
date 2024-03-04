@@ -5,8 +5,8 @@
     "singleQuote": true,
     "printWidth": 1000
   },
-  "description": "[![Actions Status](https://github.com/AleX-09-13/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AleX-09-13/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "«Игры разума» — набор из пяти консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы.",
+  "main": "../src/index.js",
   "scripts": {
     "test": "jest",
     "start": "nodemon ./bin/pr2.js",

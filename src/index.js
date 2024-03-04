@@ -7,9 +7,8 @@ const driver = (runGame, question) => {
   console.log(question);
   let count = 0;
   while (count < 3) {
-    const gameResult2 = runGame();
-    const { rightAnswer } = gameResult2;
-    console.log(`Question: ${gameResult2.questionTwo}`);
+    const { rightAnswer, questionTwo } = runGame();
+    console.log(`Question: ${questionTwo}`);
     const yourAnswer = readlineSync.question('Your answer: ');
     if (rightAnswer === yourAnswer) {
       console.log('Correct!');
@@ -23,7 +22,6 @@ const driver = (runGame, question) => {
   if (count === 3) {
     console.log(`Congratulations, ${userName}!`);
   }
-  return userName;
 };
 
 export default driver;

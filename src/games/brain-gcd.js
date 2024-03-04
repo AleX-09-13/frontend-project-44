@@ -8,13 +8,12 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 const question = 'Find the greatest common divisor of given numbers.';
-const RunGame = () => {
+const runGame = () => {
   const randomNamber1 = getRandomNumber();
   const randomNamber2 = getRandomNumber();
-  const rightAnswer1 = gcd(randomNamber1, randomNamber2);
-  const rightAnswer = rightAnswer1.toString();
+  const rightAnswer = gcd(randomNamber1, randomNamber2).toString();
   const questionTwo = `${randomNamber1} ${randomNamber2}`;
   return { rightAnswer, questionTwo };
 };
-const Start = () => driver(RunGame, question);
-export default Start;
+const startGcdGame = () => driver(runGame, question);
+export default startGcdGame;

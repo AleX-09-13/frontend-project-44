@@ -21,13 +21,12 @@ const getProgression = () => {
   return { progression2, definableNumber };
 };
 const question = 'What number is missing in the progression?';
-const RunGame = () => {
+const runGame = () => {
   const prog = getProgression();
   const progression = prog.progression2;
   const questionTwo = `${progression}`;
-  const rightAnswer1 = prog.definableNumber;
-  const rightAnswer = rightAnswer1.toString();
-  return { rightAnswer, question, questionTwo };
+  const rightAnswer = prog.definableNumber.toString();
+  return { rightAnswer, questionTwo };
 };
-const Start = () => driver(RunGame, question);
-export default Start;
+const startProgGame = () => driver(runGame, question);
+export default startProgGame;
