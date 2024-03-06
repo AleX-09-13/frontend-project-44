@@ -6,8 +6,8 @@ const getProgression = () => {
   const hiddenIndex = Math.floor(Math.random() * length);
   const progression = [];
   let definableNumber;
-  const start = getRandomNumber();
-  const diff = getRandomNumber() + 1;
+  const start = getRandomNumber(0, 10);
+  const diff = getRandomNumber(0, 10) + 1;
   for (let i = 1; i <= length; i += 1) {
     if (i === hiddenIndex + 1) {
       progression.push('..');
