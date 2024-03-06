@@ -22,7 +22,7 @@ const getProgression = () => {
 };
 const question = 'What number is missing in the progression?';
 const runGame = () => {
-  const prog = getProgression();
+  const prog = getProgression(0, 10);
   const progression = prog.progression2;
   const questionTwo = `${progression}`;
   const rightAnswer = prog.definableNumber.toString();

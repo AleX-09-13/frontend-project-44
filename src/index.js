@@ -16,12 +16,10 @@ const driver = (runGame, question) => {
     } else {
       console.log(`Your answer is a wrong answer ;(. Correct answer "${rightAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
-      break;
+      return;
     }
   }
-  if (count === 3) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default driver;

@@ -9,7 +9,7 @@ function isPrime(num) {
 }
 const question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const runGame = () => {
-  const randomNumber = getRandomNumber();
+  const randomNumber = getRandomNumber(0, 10);
   const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   const questionTwo = `${randomNumber}`;
   return { rightAnswer, questionTwo };

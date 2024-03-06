@@ -9,8 +9,8 @@ const gcd = (a, b) => {
 };
 const question = 'Find the greatest common divisor of given numbers.';
 const runGame = () => {
-  const randomNamber1 = getRandomNumber();
-  const randomNamber2 = getRandomNumber();
+  const randomNamber1 = getRandomNumber(0, 10);
+  const randomNamber2 = getRandomNumber(0, 10);
   const rightAnswer = gcd(randomNamber1, randomNamber2).toString();
   const questionTwo = `${randomNamber1} ${randomNamber2}`;
   return { rightAnswer, questionTwo };
